@@ -46,16 +46,10 @@ export default {
   data: () => ({
     isTransparent: true
   }),
-
   methods: {
     onScroll() {
       this.isTransparent = window.pageYOffset < 200;
     }
   }
-
 }
 </script>
-
-<style>
-
-</style>
