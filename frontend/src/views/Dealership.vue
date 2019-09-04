@@ -291,7 +291,18 @@
         </div>
       </div>
     </section>
+    <div>
+    <button @click="setArrayLength">setArrayLength</button>
+    <ul>
+        <li v-for="(value, i) in arr" :key="i">
+            <td>{{value}}</td>
+        </li>
+    </ul>
+</div>
+<br>
+<br>  <br>
   </div>
+  
 </template>
 
 <script>
@@ -299,8 +310,11 @@
     data () {
       return {
         panel: [],
-        items: 6
+        items: 6,
       }
+    },
+    data: {
+      arr : [1,2,3,4,5,5]
     },
     methods: {
       // Create an array the length of our items
